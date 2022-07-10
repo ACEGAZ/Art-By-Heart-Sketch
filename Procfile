@@ -1,1 +1,1 @@
-web: guncorn artbyheartsketch.wsgi
+web: gunicorn artbyheartsketch.wsgi:application

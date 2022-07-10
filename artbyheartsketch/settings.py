@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['art-by-heart-sketch.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['art-by-heart-sketch.herokuapp.com', 'localhost', '8080-acegaz-artbyheartsketch-bpt70128mnm.ws-eu53.gitpod.io', '8000-acegaz-artbyheartsketch-bpt70128mnm.ws-eu53.gitpod.io']
 
 
 # Application definition
