@@ -5,5 +5,5 @@ from .models import add_art
 
 class artDisplay(generic.ListView):
     model = add_art
-    template_name = 'base.html'
+    template_name = 'index.html'
     paginate_by = 6
