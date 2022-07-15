@@ -1,7 +1,7 @@
 
 /* nav bar */
 .bg-pink {
-    background-color: #e791d8!important;
+    background-color: #eaaee0!important;
 }
 
 img {
@@ -15,6 +15,15 @@ img {
     color: blue;
 }
 
-#cart {
-    padding-left: 400px;
+#cart-button {
+    font-size: 25px;
 }
+
+
+/* footer */
+
+footer {
+    background-color: #eaaee0!important;
+    line-height: 10px;
+}
+
