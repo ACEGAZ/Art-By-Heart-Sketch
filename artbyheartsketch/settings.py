@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'cloudinary',
+    'fontawesomefree',
 ]
 
 SITE_ID = 1

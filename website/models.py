@@ -9,3 +9,4 @@ class add_art(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     price = models.DecimalField(max_digits=6, decimal_places=2, default=False)
     content = models.TextField()
+

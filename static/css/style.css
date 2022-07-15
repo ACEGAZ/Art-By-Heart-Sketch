@@ -1,6 +1,6 @@
 
 /* nav bar */
-.bg-light {
+.bg-pink {
     background-color: #e791d8!important;
 }
 
@@ -10,6 +10,11 @@ img {
     width: 100px;
 }
 
-a {
+.nav-link {
     font-size: 20px;
+    color: blue;
+}
+
+#cart {
+    padding-left: 400px;
 }
