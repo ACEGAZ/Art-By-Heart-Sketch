@@ -1,3 +1,4 @@
+/* body font */
 body {
 font-family: 'Dancing Script', cursive;
 }
@@ -20,6 +21,7 @@ img {
 
 #cart-button {
     font-size: 25px;
+    padding-top: 14px;
 }
 
 
@@ -30,3 +32,22 @@ footer {
     line-height: 10px;
 }
 
+/* contact text-box */
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    font-size: 20px;
+    
+   }
+
+   form {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 50%;
+    margin-left: 25%;
+   }

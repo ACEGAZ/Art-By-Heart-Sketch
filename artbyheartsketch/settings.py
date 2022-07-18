@@ -158,3 +158,14 @@ CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+CONTACT_EMAIL = 'wolfywoof101@gmail.com'
+ADMIN_EMAILS = 'wolfywoof101@gmail.com'
+
+
+# Twilio SendGrid
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')

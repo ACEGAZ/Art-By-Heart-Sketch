@@ -10,3 +10,12 @@ class add_art(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2, default=False)
     content = models.TextField()
 
+
+class Contact(models.Model):
+    """contact form for users to request commisions"""
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
