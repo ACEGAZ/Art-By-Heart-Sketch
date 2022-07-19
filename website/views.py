@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.conf import settings
 from django.core.mail import send_mail
-from .form import ContactForm
 from django.views import generic
+from .forms import ContactForm
 from .models import add_art
 
 
@@ -23,7 +23,7 @@ def contact_view(request):
             form.save()
             email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
             email_message = form.cleaned_data['message']
-            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
+            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAILS)
             return render(request, 'success.html')
     form = ContactForm()
     context = {'form': form}

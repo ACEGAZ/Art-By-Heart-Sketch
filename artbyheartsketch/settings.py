@@ -160,7 +160,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 CONTACT_EMAIL = 'wolfywoof101@gmail.com'
-ADMIN_EMAILS = 'wolfywoof101@gmail.com'
+ADMIN_EMAILS = ['wolfywoof101@gmail.com']
 
 
 # Twilio SendGrid
