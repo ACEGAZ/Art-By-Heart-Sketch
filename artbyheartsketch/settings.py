@@ -28,7 +28,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+development = os.environ.get('DEVELOPMENT', False)
+DEBUG = development
 
 ALLOWED_HOSTS = ['art-by-heart-sketch.herokuapp.com', 'localhost', '8080-acegaz-artbyheartsketch-bpt70128mnm.ws-eu53.gitpod.io', '8000-acegaz-artbyheartsketch-bpt70128mnm.ws-eu53.gitpod.io']
 
@@ -47,9 +48,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'website',
     'cloudinary',
     'fontawesomefree',
+    'website',
 ]
 
 SITE_ID = 1
@@ -140,9 +141,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
@@ -169,3 +171,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+
