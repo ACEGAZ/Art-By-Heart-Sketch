@@ -145,7 +145,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 if 'DEVELOPMENT' in os.environ:
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 else:
@@ -153,6 +153,7 @@ else:
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 
 # Default primary key field type
