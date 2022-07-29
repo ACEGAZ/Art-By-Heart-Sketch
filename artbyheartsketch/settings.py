@@ -169,10 +169,9 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 CONTACT_EMAIL = 'wolfywoof101@gmail.com'
 ADMIN_EMAILS = ['wolfywoof101@gmail.com']
 
-
-# Twilio SendGrid
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_ACCESS_KEY_ID = os.environ.get('YOUR-ACCESS-KEY-ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('YOUR-SECRET-ACCESS-KEY')
+AWS_SES_REGION_NAME = 'eu-west-2'
+AWS_SES_REGION_ENDPOINT = 'eu-west-2'
